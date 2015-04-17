@@ -9,6 +9,10 @@
             jQuery(window).unbind("beforeunload");
             setTimeout(function() {
                 //window.location = url;
+                alert('hi');
+
+                navigator.vibrate(5000);
+
                 OptiMonk.displayCampaign(2);
             }, 0);
 
