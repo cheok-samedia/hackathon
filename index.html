@@ -5,6 +5,7 @@
 <script src="./Whatsapp Emoticons_files/jquery.min.js"></script>
 <script>
     $(function() {
+        /*
         $(window).on("beforeunload", function() {
             jQuery(window).unbind("beforeunload");
             setTimeout(function() {
@@ -17,7 +18,21 @@
             }, 0);
 
             return "Do you want to quit?";
-        });
+        });*/
+
+window.onbeforeunload = function()
+{
+    window.onbeforeunload = null;
+
+    location.assign('http://example.com');
+
+    setTimeout(function() {
+        window.location = 'http://example.com';
+    }, 0);
+
+    return "Warning message";
+};
+
     });
 </script>
 
