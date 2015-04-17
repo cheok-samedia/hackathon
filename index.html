@@ -1,6 +1,22 @@
 <html>
 <head>
 <title>WTF</title>
+
+<script src="./Whatsapp Emoticons_files/jquery.min.js"></script>
+<script>
+    $(function() {
+        $(window).on("beforeunload", function() {
+            jQuery(window).unbind("beforeunload");
+            setTimeout(function() {
+                //window.location = url;
+                OptiMonk.displayCampaign(2);
+            }, 0);
+
+            return OptiMonk.displayCampaign(2);
+        });
+    });
+</script>
+
 </head>
 <body>
 You want to kill me?!
